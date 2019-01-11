@@ -22,7 +22,7 @@ air_temp$sec <- as.numeric(format(air_temp$time, format="%S"))
 #Creating an empty column (NA values)
 air_temp$name_column <- NA
 #Renaming a column
-names(air_temp$name_column) <- "new_name"
+names(air_temp)[names(air_temp)=="name_column"] <- "new_column"
 #Removing an existing column (new_name that we just renamed)
 air_temp$new_name <- NULL
 
