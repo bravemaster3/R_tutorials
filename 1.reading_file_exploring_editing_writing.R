@@ -24,7 +24,7 @@ air_temp$name_column <- NA
 #Renaming a column
 names(air_temp)[names(air_temp)=="name_column"] <- "new_column"
 #Removing an existing column (new_name that we just renamed)
-air_temp$new_name <- NULL
+air_temp$new_column <- NULL
 
 #Saving the final file to disk
 write.table(air_temp,"path_to_folder/air_temp_edited.csv", sep=",", 
