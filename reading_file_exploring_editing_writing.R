@@ -18,9 +18,7 @@ air_temp$min <- as.numeric(format(air_temp$time, format="%M"))
 air_temp$sec <- as.numeric(format(air_temp$time, format="%S"))
 
 
-#######
-#BONUS#
-#######
+
 #Creating an empty column (NA values)
 air_temp$name_column <- NA
 #Renaming a column
@@ -33,3 +31,16 @@ write.table(air_temp,"path_to_folder/air_temp_edited.csv", sep=",",
             append = FALSE, quote = TRUE, 
             eol = "\n", na = "NA", dec = ".", row.names = FALSE,
             col.names = TRUE, qmethod = c("escape", "double")) 
+
+#######
+#BONUS#
+#######
+
+#What is a function?
+#You used many functions in the text
+#example: str function
+str()
+#getting help on how to use the function
+help(str)
+#A function takes arguments and returns a result
+#function(args...)
