@@ -41,3 +41,14 @@ plot(mean_temp~month, data=air_temp3, type ="h")
 #################################################################
 ###Now let's do some more advanced plotting using ggplot2########
 #################################################################
+#Install the ggplot2 library if you don't have it yet
+install.packages("ggplot2")
+#Import the library
+library(ggplot2)
+#First, let's define the ploting area #notice that ggplot works like layers, the first one will define the plotting area
+ggplot(data=air_temp, aes(time,Tair))
+#Let's add a second layer, that of the points we want to plot
+ggplot(data=air_temp, aes(time,Tair))+
+  geom_point()
+
+
