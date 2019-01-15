@@ -10,4 +10,4 @@ plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature",col="red")
 plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature",col="red", pch=16)
 plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature",col="red", pch=16, cex=0.02)
 
-
+#Let's create a new dataframe in order to try to plot a histogram
