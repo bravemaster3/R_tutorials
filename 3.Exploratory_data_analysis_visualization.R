@@ -11,3 +11,13 @@ plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature",col="red", pc
 plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature",col="red", pch=16, cex=0.02)
 
 #Let's create a new dataframe in order to try to plot a histogram
+#Try to understand what we did here:
+air_temp2 <- unique(air_temp$month[which(!is.na(air_temp$month))])
+
+#convert air_temp2 to a dataframe
+air_temp2 <- as.data.frame(air_temp2)
+#Check the names of the columns of the dataframe air_temp2
+names(air_temp2) #You will notice there is only one column
+#Rename the first and only column to "month"
+names(air_temp2)[1] <- "month"
+
