@@ -21,3 +21,13 @@ names(air_temp2) #You will notice there is only one column
 #Rename the first and only column to "month"
 names(air_temp2)[1] <- "month"
 
+#Let's get the mean of air temperature, from dataframe air_temp by month and add it as new column to air_temp2
+  #Creating an empty column
+air_temp2$mean_temp <- NA
+  #Computing the mean into mean_temp
+for (i in air_temp2$month){
+air_temp2$mean_temp[which(air_temp2$month == i)] <- mean(air_temp$Tair[which(air_temp$month == i)], na.rm=T)
+}
+
+#This could have been done simply using the function aggregate:
+air_temp3 <- aggregate(Tair~month, data=air_temp,mean)
