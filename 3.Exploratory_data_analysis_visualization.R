@@ -1,7 +1,7 @@
 # An important step in statistics or data analysis in general is the visualization of data.
 # Import air_temp_edited to a variable you will name air_temp (output of section 1.reading_file_exploring_editing_writing.R) and do all the necessary (i.e convert factor to time object if necessary)
 
-#Let's make our first graph
+#Let's make our first graph (a scatter plot)
 plot(Tair~time, data=air_temp) #pretty easy right?
 #Let's plot again, specifying the title of the X and Y axis (xlab and ylab)
 plot(Tair~time, data=air_temp, xlab="Time", ylab="Air Temperature")
@@ -31,3 +31,13 @@ air_temp2$mean_temp[which(air_temp2$month == i)] <- mean(air_temp$Tair[which(air
 
 #This could have been done simply using the function aggregate:
 air_temp3 <- aggregate(Tair~month, data=air_temp,mean)
+names(air_temp3)[names(air_temp3)=="Tair"] <- "mean_temp" #Remember this from first module
+#Now, lets plot the histograme of mean air temp per month
+plot(mean_temp~month, data=air_temp3, type ="h")
+#Plot the previous graph, renaming the Y axis to "Mean Temperature", changing the width
+#of the bars using the ltw parameter
+
+
+#################################################################
+###Now let's do some more advanced plotting using ggplot2########
+#################################################################
