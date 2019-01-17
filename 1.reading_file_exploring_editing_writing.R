@@ -1,3 +1,5 @@
+#Follow the following link, Download the file air_temperature.csv and put in a folder on your computer
+https://github.com/bravemaster3/R_tutorials/blob/time_series/data/air_temperature.csv
 #Reading a csv file and exploring its content
 #read.table funtion (one alternative os read.csv)
 air_temp <- read.table("path_to_my_file/air_temperature.csv", header=TRUE, sep=",")
