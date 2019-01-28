@@ -1,3 +1,5 @@
+#YDownload and open the file at the folowing address
+https://github.com/bravemaster3/R_tutorials/blob/time_series/data/grassland_meteo_gf.csv
 g <- read.table("D:/R_tutorials/data/grassland_meteo_gf.csv", header=TRUE, sep=",")
 View(g)
 
